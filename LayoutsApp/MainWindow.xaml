@@ -1,0 +1,57 @@
+﻿<Window x:Class="LayoutsApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LayoutsApp"
+        mc:Ignorable="d"
+        Title="Компоновка" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <UniformGrid Grid.Column="0" Grid.Row="0" Rows="2" Columns="2">
+            <Button Content="1" />
+            <Button Content="2" />
+            <Button Content="3" />
+            <Button Content="4" />
+        </UniformGrid>
+        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Vertical">
+            <Button Background="Blue" MinWidth="30" Content="1" />
+            <Button Background="White" MinWidth="30" Content="2" HorizontalAlignment="Left"/>
+            <Button Background="Red" MinWidth="30" Content="3" />
+            <Button Background="Pink" MinWidth="30" Content="4" HorizontalAlignment="Center"/>
+        </StackPanel>
+        <DockPanel Grid.Column="0" Grid.Row="1" LastChildFill="True">
+            <Button DockPanel.Dock="Top" Background="Pink" Content="1" />
+            <Button DockPanel.Dock="Bottom" Background="Pink" Content="2" />
+            <Button DockPanel.Dock="Bottom" Background="Red" Content="3" />
+            <Button DockPanel.Dock="Left" Background="Purple" Content="4" />
+            <Button DockPanel.Dock="Right" Background="Purple" Content="5" />
+            <Button DockPanel.Dock="Top" Background="Red" Content="6" />
+            <Button Content="7" />
+        </DockPanel>
+        <WrapPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical">
+            <Button Background="Black" Content="1"/>
+            <Button Background="Blue" Content="2" />
+            <Button Content="3" Width="60"/>
+            <Button Background="Red" Content="4" Width="100"/>
+            <Button Background="Green" Content="5"/>
+            <Button Background="Pink" Content="6" Height="80" HorizontalAlignment="Right"/>
+            <Button Background="GhostWhite" Content="7" />
+            <Button Background="Purple" Content="8" Width="100" />
+        </WrapPanel>
+        <Canvas Grid.Column="0" Grid.Row="2">
+            <Button Background="Pink" Content="1" Canvas.Top="45" Canvas.Left="80" Width="100"/>
+            <Button Background="Lavender" Content="2" Canvas.Top="50" Canvas.Right="35" Width="80"/>
+            <Button Background="Blue" Content="3" Canvas.Bottom="45" Canvas.Left="200" Width="100"/>
+            <Button Background="HotPink" Content="4" Canvas.Bottom="25" Canvas.Right="255" Width="30"/>
+        </Canvas>
+    </Grid>
+</Window>
